@@ -1,0 +1,134 @@
+body {
+	background-color: rgb(43, 42, 42);
+}
+
+.keyboard {
+	padding: 5px 0;
+	background: #333333;
+	user-select: none;
+	width: 100%;
+	margin: none;
+}
+
+.keyboard__keys {
+	text-align: center;
+	padding: 25px;
+}
+
+.keyboard__key {
+	height: 50px;
+	width: 50px;
+	margin: 3px;
+	border-radius: 50px;
+	border-color: #ffffff;
+	border-width: 3px;
+	background: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	font-size: 1.05rem;
+	outline: none;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: top;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.keyboard__key:active {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+.lightboard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+	background: #615757;
+	margin: none;
+	user-select: none;
+}
+
+.lightboard__lights {
+	text-align: center;
+	padding: 25px;
+}
+
+.lightboard__light {
+	height: 50px;
+	width: 50px;
+	margin: 3px;
+	border-radius: 50px;
+	border: none;
+	background: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	font-size: 1.05rem;
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: top;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.light__on {
+	background: yellow;
+	color: black;
+}
+
+.rotorboard {
+	width: 100%;
+	height: 150px;
+	background: #333333;
+	user-select: none;
+	margin: none;
+}
+
+.rotors {
+	text-align: center;
+	padding: 25px;
+}
+
+.rotor {
+	height: 50px;
+	width: 25px;
+	margin: 30px;
+	border-color: #ffffff;
+	border-width: 3px;
+	border-style: solid;
+	background: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	font-size: 1.05rem;
+	outline: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: top;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.sound {
+	height: 25px;
+	width: 30px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	background: transparent;
+	border: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.enigma {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-around;
+	margin: auto;
+	height: 90vh;
+	width: 100vh;
+	max-width: 750px;
+}
