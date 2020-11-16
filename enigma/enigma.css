@@ -88,13 +88,15 @@ body {
 
 .rotors {
 	text-align: center;
-	padding: 25px;
+	padding: 20px;
 }
 
 .rotor {
 	height: 50px;
 	width: 25px;
 	margin: 30px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 	border-color: #ffffff;
 	border-width: 3px;
 	border-style: solid;
@@ -110,6 +112,33 @@ body {
 	-webkit-tap-highlight-color: transparent;
 }
 
+.rotor:hover {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+.dropdowns {
+	width: 100%;
+	height: 50px;
+	user-select: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: top;
+	margin: none;
+}
+
+.dropdown {
+	background: #948383;
+	margin: 28px;
+	margin-bottom: 0px;
+	width: 35px;
+	height: 20px;
+	user-select: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
 .sound {
 	height: 25px;
 	width: 30px;
@@ -120,6 +149,81 @@ body {
 	border: none;
 	user-select: none;
 	cursor: pointer;
+}
+
+.info {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	background: transparent;
+	border: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: white;
+	width: 800px;
+	max-width: 80%;
+}
+
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+	padding: 20px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	font-family: "Open Sans";
+}
+
+.modal-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modal-body {
+	padding: 20px 20px;
+	font-family: "Open Sans";
+}
+
+#modal-overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.25);
+	pointer-events: none;
+}
+
+#modal-overlay.active {
+	opacity: 1;
+	pointer-events: all;
 }
 
 .enigma {

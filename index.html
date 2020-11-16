@@ -3,13 +3,35 @@
     <title>Enigma Machine</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="enigma/enigma.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="info-popup">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">How to Use</div>
+                <button class="close-button" id="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                To use the enigma machine, type your secret message into the keyboard. Each letter on the keyboard, when pressed, will cause a light to activate. This light is the encrypted version of the inputted letter. As you type the letters of your message, record the lights that light up, which represent the letters of the encrypted message.
+                <br>
+                <br>
+                For the decryption process, you need to remember the initial rotor position before you began inputting your original message, which is located at the top of the machine. To decrypt, set the rotors back to the initial position by scrolling the mousewheel, and once the rotors are reset, input the encrypted message. The lights that light up correspond to the letters of the original plaintext message. For example, if the rotors read "XCP" before you began typing your message, you must scroll the rotors back to "XCP" before decrypting the message.
+                <br>
+                <br>
+                For an in-depth explanation on the Enigma Machine, <a href="https://en.wikipedia.org/wiki/Enigma_machine#:~:text=The%20Enigma%20machine%20is%20an,branches%20of%20the%20German%20military." target="_blank">see here</a>.
+            </div>
+        </div>
+        <div id="modal-overlay"></div>
+    </div>
     <div class="enigma" id="enigma">
         <script src="enigma/rotors.js"></script>
         <script src="enigma/lightboard.js"></script>
         <script src="enigma/keyboard.js"></script>
-        <img class="sound" id="mutebutton" width="30" height="30" src="images/mute.png">
+        <img class="sound" id="mute-button" width="30" height="30" src="images/mute.png">
+        <img class="info" id="info-button" width="30" height="30" src="images/info.png">
         <script src="enigma/soundbutton.js"></script>
+        <script src="enigma/infobutton.js"></script>
     </div>
 </body>

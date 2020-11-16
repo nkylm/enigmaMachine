@@ -88,7 +88,7 @@ const Keyboard = {
                 var encryptedPosition = key.toUpperCase().charCodeAt(0)-65;
                 for (let i = 0; i < 3; i++){
                     encryptedPosition = ((encryptedPosition) + Rotors.elements.values[2-i])%26;
-                    encryptedPosition = Rotors.elements.encryption[i][encryptedPosition];
+                    encryptedPosition = Rotors.elements.encryption[document.getElementById(i).value][encryptedPosition];
                     encryptedPosition = ((((encryptedPosition.charCodeAt(0)-65)-(Rotors.elements.values[2-i]))%26)+26)%26;
                 }
 
@@ -98,7 +98,7 @@ const Keyboard = {
                 // Second rotor pass
                 for (let i = 0; i < 3; i++){
                     encryptedPosition = (encryptedPosition + Rotors.elements.values[i])%26;
-                    encryptedPosition = Rotors.elements.encryption[2-i].indexOf(String.fromCharCode(encryptedPosition+65));                    
+                    encryptedPosition = Rotors.elements.encryption[document.getElementById(2-i).value].indexOf(String.fromCharCode(encryptedPosition+65));                    
                     encryptedPosition = (((encryptedPosition - (Rotors.elements.values[i]))%26)+26)%26;
                 }
 
